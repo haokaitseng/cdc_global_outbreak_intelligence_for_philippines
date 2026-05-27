@@ -100,6 +100,82 @@ Use resource/travel_alert_severity_disease_stacked.png
 
 ------------------------------------------------------
 # Part 2: Global AI development
+In part 2, you (Claude) may mostly use the information from LLM_AI_Surveillance_Scoping_Analysis_v4_2026.md or search online if I don't provide too much hint
+
+## The land scape -1 
+Today’s bio-surveillance landscape is built on established intelligence systems like below: make a table for overview and comparison
+
+| System | Access / Type | Core Focus & Technology |
+| :--- | :--- | :--- |
+| **WHO EIS** | Restricted / Official | Secure IHR portal for sensitive, official country alerts. |
+| **WHO DON** | Public / Official | Verified, authoritative global public outbreak notices. |
+| **WHO Regional** | Public / Official | Routine regional bulletins. |
+| **ECDC / EuroSurv**| Public / Regional | Peer-reviewed science paired with official EU tracking. |
+| **WOAH** | Public / Official | Animal health and zoonotic spillover. |
+| **GPHIN** | Restricted / Gov | Canadian EBS pioneer; automated multi-lingual email alerts. |
+| **HealthMap** | Public / Automated | 2006 pioneer; automated web-scraping and live mapping. |
+| **ProMED** | Paid / Expert | Crowdsourced alerts verified by experts + AI summaries. |
+| **BlueDot** | Paid / Enterprise | Recommended with 3 risk concern levels and flight data. |
+| **CIDRAP** | Public / Academic | High-quality news and policy. |
+| **EPIWATCH** | Paid / Enterprise | 50+ language AI OSINT for early outbreak detection. |
+| **BEACON** | Public / Academic | Founded in 2025. Highly recommended. Custom AI agents & LLMs. Comparative analysis is a plus. |
+| **Outbreak News Today** | Public / Media | Active independent news hub. |
+| **Avian Flu Diary**| Public / Expert Blog | Rapid expert analysis of influenza and avian threat data. |
+
+## WHO EIS
+Building on this base, a remarkable technological leap has emerged. The WHO EIOS 2.0 now utilizes AI-powered tools for automated analysis, 
+
+## BEACON
+while BEACON leverages its PandemIQ Llama model for informal event-based surveillance. 
+
+
+## Two New Global Platforms 
+Announced at WEF Annual Meeting 2026 as global public goods:
+
+| Platform | Function |
+|----------|----------|
+| **Pandemic Preparedness Engine (PPX)** | End-to-end R&D platform integrating genomic surveillance + epidemiological modeling + viral evolution + antigen design via agentic AI |
+| **Global Pathogen Analysis Platform (GPAP)** | World's first globally accessible, AI-powered platform turning pathogen data (human, animal, plant, environmental — **One Health**) into standardized, actionable intelligence |
+
+
+## ARIES Agentic Framework Formalized (better title ?)
+
+The ARIES framework received expanded formalization in early 2026:
+
+- Components: Flows, Crews, Agents, Process, Tasks
+- Configurable: Memory, LLMs, Knowledge, Reasoning, Training, Tools
+- Inspired by Sara De Luca's zero-shot LLM classification (90.2% precision) on COVID-19 (2020–2022) and Mpox (Europe)
+- **Goal**: Decision Intelligence System reducing hallucination, retrieving updated information only, task-specific
+
+**Reference**: Wattamwar A, Akwafuo S. ARIES: A Scalable Multi-Agent Orchestration Framework. *arXiv* 2601.01831, January 2026.  https://arxiv.org/pdf/2601.01831
+
+> 💭 **[KAI]:** manager agent + Sepcialized agents (A layer of sub-agents, each assigned a domain-specific
+persona and toolset: Senior Medical Scientist, CDC Data Analyst, WHOIntelligence Officer ). a Hierarchical Multi-Agent Architecture is not only capable of replicating the investigative workflows of a human epidemiologist but can do so with a level of speed and cross-source verification that exceeds manual capabilities. 
+Future roadmap: MCP, Agentic Self-Correction, Integration of Unconventional Data Streams, Weeky Epidemiological Records
+
+
+## AI Agents for Respiratory Diseases — Quadripartite Framework (2026 peer-reviewed)
+
+The Yang et al. 2026 paper in JMIR formalizes the **quadripartite framework**:
+
+1. Surveillance
+2. Risk evaluation
+3. Early warning
+4. **Decision support and intervention optimization through AI agents** ← NEW PILLAR
+
+**Application example**: Given an emerging RSV outbreak in a region with limited ICU capacity, AI agents synthesize epidemiological forecasts, resource availability, and intervention effectiveness data to recommend optimal response strategies.
+
+**Reference**: Yang L, Shan L, Cao X, Cui J, Tong M, Niu Y, Zhang T. AI Agents and Epidemic Intelligence on Respiratory Infectious Diseases: Toward a Conceptual Framework Integrating Decision Support. *J Med Internet Res.* 2026;28:e86936. DOI: 10.2196/86936
+**URL**: https://www.jmir.org/2026/1/e86936
+
+> 💭 **[KAI]:** relevant. universal epidemic intelligence model. only single country implementation
+Furthermore, hierarchical multi-agent systems now act as 24/7 digital epidemiologists—synthesizing multilingual signals and supporting decisions that once relied solely on human analysts. 
+
+
+## Concerns 
+### 8-2. Why can’t epidemiology be automated (yet)? Perhaps it shouldn’t be Roemer J. Janse 1,2, and Amber Meulenbeld
+International Journal of Epidemiology, 2026, 55(3), dyag065 
+https://doi.org/10.1093/ije/dyag065 
 
 
 
