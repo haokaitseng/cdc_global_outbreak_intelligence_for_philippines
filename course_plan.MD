@@ -22,6 +22,13 @@ Plum
 - presetation time: 45 minutes.
 - audience: officers from Ministry of Health, Philippines (can only read Eng)
 ------------------------------------------------------
+# Part 0: About the Speaker
+Hao-Kai Tseng is a contract assistant at the Taiwan CDC's Epidemic Intelligence Center,
+leading the international outbreak monitoring team. With seven years in public health data
+science, he previously supported sustainable immunisation programmes at Gavi, the
+Vaccine Alliance. For more on his work, visit his portfolio at haokaitseng.github.io.
+
+
 # Part 1: Taiwan
 
 ## Lesson's learnt from SARS
@@ -40,6 +47,10 @@ use the page 4 from the resource/20250910 Taiwan CDC's approach to international
 
 ## Workflow -1
 reference the page 5 of "resource/20250910 Taiwan CDC's approach to international outbreak monitoring.pdf", into two pages. restructure the sources, data processing, and disseminations as the main point.
+
+add a secontion different method of crawler using Python and popular packages, as a table 
+
+use "OSINT" as a big word in background, refelcting open source intelligence
 
 ## Workflow -2
 IEN in morning meetings should be revised as :
@@ -80,6 +91,16 @@ Only use the Resource/global.png
 also list below country names:
 國際重要疫情資訊常見的前15名國家（地區）依序為美國、中國、香港、日本、英國、印度、巴西、韓國、德國、法國、越南、奈及利亞、菲律賓、新加坡及泰國
 
+## Comparing with WHO DON
+Reference: The World Health Organization’s Disease Outbreak News: A retrospective database
+Colin J. Carlson,Matthew R. Boyce,Margaret Dunne,Ellie Graeden,Jessica Lin,Yasser Omar Abdellatif,Max A. Palys,Munir Pavez,Alexandra L. Phelan,Rebecca Katz 
+Published: January 25, 2023 https://doi.org/10.1371/journal.pgph.0001083
+
+use resource/journal.pgph.0001083.t001
+
+translate below in eng: 台灣排名前15個疾病中，有10個（占67%）同樣列於WHO 2009–2025年的DON前
+15名疾病，顯示我國國際疫情監測焦點符合與國際同步之原則
+
 ## Philippines in spot light
 rank the number of diseases in phlippine that we report mostly in IEN. 
 I will provide the deatil.
@@ -99,8 +120,22 @@ Use resource/travel_alert_severity_disease_stacked.png
  use resource/acer_screenshot.png. you may consider the arrangement like page 11 of resource/20250910 Taiwan CDC's approach to international outbreak monitoring.pdf.
 
 ------------------------------------------------------
-# Part 2: Global AI development
+# Part 2: Global AI advances
 In part 2, you (Claude) may mostly use the information from LLM_AI_Surveillance_Scoping_Analysis_v4_2026.md or search online if I don't provide too much hint
+
+
+## Various Functions of AI for Infectious-Disease Surveillance
+| Function | Examples |
+|---|---|
+| Early warning | NLP of news sources; unsupervised ML of social media to detect unknown infections |
+| Pathogen classification | CNN for reading antibiograms; CNN to automate malaria microscopy and diagnosis |
+| Risk assessment | Reinforcement learning for COVID-19 testing targeting; random forest/XGBoost for syndromic surveillance COVID-19 risk prediction |
+| Source identification | Automated data mining of EMR to uncover transmission routes; supervised ML + digital signal processing for genomic tracing |
+| Hotspot detection | Neural computing using hospital waiting room sound for influenza spikes; ANN for TB spatial clustering |
+| Tracking & forecasting | Real-time model stacking for seasonal influenza forecasts; ML combining multiple data sources for COVID-19 monitoring |
+
+REF: Advances in Artificial Intelligence for Infectious-Disease Surveillance
+Authors: John S. Brownstein, Ph.D., Benjamin Rader, M.P.H. https://orcid.org/0000-0002-6095-0193, Christina M. Astley, M.D., Sc.D., and Huaiyu Tian, Ph.D.Author Info & Affiliations Published April 26, 2023 N Engl J Med 2023;388:1597-1607 DOI: 10.1056/NEJMra2119215
 
 ## The land scape -1 
 Today’s bio-surveillance landscape is built on established intelligence systems like below: make a table for overview and comparison
@@ -127,6 +162,27 @@ Building on this base, a remarkable technological leap has emerged. The WHO EIOS
 
 ## BEACON
 while BEACON leverages its PandemIQ Llama model for informal event-based surveillance. 
+
+- Our disease experts use PandemIQ Llama to extract key information and conduct preliminary assessment of incoming biothreat signals from our partner HealthMap, alongside manual submissions 
+- BEACON editorial staff then choose which signals to report on and use PandemIQ Llama to generate an initial draft report for us to edit, expand on and provide additional contextual information to before publishing
+- By training the LLM on pandemic-specific text, we've created a domain-adapted foundation model specifically designed for high-stakes health intelligence. 
+- PandemIQ Llama was built to help close that gap, trained on 5.7 billion tokens (or roughly 4.3 billion words) of authoritative epidemiological knowledge spanning 31 languages and 16 priority pathogens
+Reference: https://beaconbio.org/en/blog/post/?slug=pandemiq-llama-llm
+
+use reference/large_BEACON_workflow_6ab9503d42.png
+
+
+## Knowledge graph for WHO DON
+
+Reference: Consoli, S., Coletti, P., Markov, P.V. et al. An epidemiological knowledge graph extracted from the World Health Organization’s Disease Outbreak News. Sci Data 12, 970 (2025). https://doi.org/10.1038/s41597-025-05276-2
+
+Claude make a short summary in two sentence for this paper
+
+- Use resource/41597_2025_5276_Fig2_HTML
+- Use resource/41597_2025_5276_Fig6_HTML
+
+
+- Entity linking74, i.e. grounding the facts in domain ontologies, is a technique used to reduce this phenomenon and an essential feature of knowledge graphs. In our case, the data resources of eKG have been linked to biomedical ontologies using the NCBO BioPortal (https://bioportal.bioontology.org/), and to geo-locations using GeoNames (https://www.geonames.org/), ensuring consistent and accurate entity representation across datasets.
 
 
 ## Two New Global Platforms 
@@ -171,6 +227,33 @@ The Yang et al. 2026 paper in JMIR formalizes the **quadripartite framework**:
 > 💭 **[KAI]:** relevant. universal epidemic intelligence model. only single country implementation
 Furthermore, hierarchical multi-agent systems now act as 24/7 digital epidemiologists—synthesizing multilingual signals and supporting decisions that once relied solely on human analysts. 
 
+## EIS in Germany
+- Surveillance system attributes for evaluating the Epidemic Intelligence from Open Sources system for international public health intelligence ranked
+
+use resource/tileshop.jpeg
+
+- During the evaluation of the EIOS system, the PHI team used a customised EIOS board with 56 sources, which detected 15 of 20 reported PHI-relevant signals. Approximately 76 articles had to be screened to detect one signal. Using a higher number of EIOS sources would have detected one more signal and improved timeliness by half a day, but would have required screening 35,546 articles instead of 1,138
+
+recommend integrating EIOS with an event management system to facilitate signal documentation and reporting
+increasing the number of EIOS sources increased timeliness and sensitivity only slightly, but caused a 35-fold increase in articles requiring screening — from 1,138 to 35,546
+
+ref: Martín-Sánchez M, Esquevin S, Jansen A, Gillesberg Lassen S. Design and implementation of an evaluation framework for the Epidemic Intelligence from Open Sources (EIOS) system for international public health intelligence at the Robert Koch Institute, Germany, 2023. Euro Surveill. 2026 Feb;31(5):2500363. doi: 10.2807/1560-7917.ES.2026.31.5.2500363. PMID: 41645798; PMCID: PMC12881845.
+
+
+
+## An indicator framework for Event-based surveillance systems
+reference: Lancet Glob Health. Author manuscript; available in PMC: 2024 Aug 27.
+Published in final edited form as: Lancet Glob Health. 2024 Feb 13;12(4):e707–e711. doi: 10.1016/S2214-109X(24)00034-2 An indicator framework for the monitoring and evaluation of event-based surveillance systems
+
+use pic from resource/nihms-2011590-f0001.png
+
+## The Innovation Forum AI podcast
+Artificial Public Health Intelligence Weekly Journal Digest
+Oliver Morgan
+use pic from resource/2dd3dfa8-55ba-4ecc-af31-3a7fbdb6c6c3_3000x3000
+You can listen to the full episode here: YouTube, Apple Podcasts, Spotify, and Amazon Music.
+
+ref: https://aipublichealth.substack.com/
 
 ## Concerns 
 ### 8-2. Why can’t epidemiology be automated (yet)? Perhaps it shouldn’t be Roemer J. Janse 1,2, and Amber Meulenbeld
@@ -184,24 +267,33 @@ https://doi.org/10.1093/ije/dyag065
 
 
 ------------------------------------------------------
-# Part 3: Global AI development
+# Part 3: Taiwan's Blue print
 
-This year&#39;s incidents - Nipah virus in India, Hantavirus on a cruise ship, and the third Ebola
-PHEIC - underscore why early detection of distant epidemic signals and rapid coordination
-are cornerstones of global health security. AI is reshaping this work, shifting us from
-human-curated reporting toward real-time, AI-powered signal detection.
-Collectively, many AI initiatives and networks are accelerating, widening, and strengthening
-global outbreak detection. Now WHO EIOS 2.0 adds automated AI analysis, BEACON
-applies its PandemIQ Llama model, and multi-agent systems can act as 24/7 digital
-epidemiologists synthesizing signals.
-Taiwan also offers a grounded perspective. Since 2009, Taiwan CDC’s international
-outbreak monitoring mechanism has processed and publicly shared over 70,000 country-
-disease incidents, using a priority-pathogen, risk-based framework to drive timely decisions,
-travel alerts, and risk communication. Looking ahead, Taiwan CDC is building a next-
-generation system integrating AI protocols, risk-based signal labeling, and agentic
-workflows.
 
-Hao-Kai Tseng is a contract assistant at the Taiwan CDC&#39;s Epidemic Intelligence Center,
-leading the international outbreak monitoring team. With seven years in public health data
-science, he previously supported sustainable immunisation programmes at Gavi, the
-Vaccine Alliance. For more on his work, visit his portfolio at haokaitseng.github.io.
+## AI-first System design
+
+- Architecture & Sovereignty: Deploys a modular, containerized cloud-based system utilizing microservices with active-backup load balancing and strict data localization completely inside Taiwan.  
+- Database Engineering: Builds a cloud-based system database under 3NF relational modeling with explicit ACID traits and temporal partitioning to maximize LLM fetch speeds.  
+- Core AI Architecture: Powers an advanced AI pipeline running Context Window Management, paid AI API keys and dynamic multi-version model management to easily switch underlying commercial LLMs.  
+- Agentic AI Workflows: Utilizes autonomous AI Agents to execute multi-source fact-checking and automated risk reasoning alongside human-in-the-loop validation gates.  - Security & Compliance: Secures the cloud-based system under the SSDLC framework to satisfy the "Ordinary" defense tier using RBAC tied directly to institutional Active Directory accounts.  
+
+
+
+## AI-powered busniness process optimisation
+
+- Data Ingestion: Automated incremental global scraping from common source, disease-specific source, country specific source, AI multi-format file parsing, data upload manually, and live cross-system data streaming to CDC's systems. Multi AI agent collaborate: crawler, verify, extract, assess, compare, notify, summary.  
+- Daily Intelligence: AI priority triaging , smart summary fusion , map-linked briefing dashboards with text-to-speech , and public portal syncs.  
+- Deliverable Generation: One-click automated formatting for PPTX epidemic weeklies , LLM media press releases , and executive briefing sheets.  
+- Situation Dashboards: Secure dual-network separation (secured vs public), conversational natural language chart generation , electronic maps , and open public APIs, subscribtion. Special action to pandemic response and monitoring.  
+- Risk Assessment: Autonomous AI Agents querying literature to output quantitative reports with manual parameter overrides.
+- Travel Health notices: Algorithmic metric evaluation for automated tier shifts , instant safety threshold alerts , and dynamic pathogen auto-enrollment
+
+> Take Ebola, the system should be able to verify and examine the data across various time points, different expressions (case, confirmed, probable, suspicious), different agencies, and even when data go back ward modification (today's accumulated count less than yesterday's count) 
+
+## A matter of 'when', not 'if'
+style: big quotes.
+We haven't learnt the full lession of COVID pandemic, given the failure of reaching consensus of Pandemic Agreement's PABS
+Why trust remains key? -> 
+> Nonetheless, as the protracted Ebola epidemic in DRC and epidemics of a different Ebola strain in Uganda in 2022-2023 have shown, having effective vaccines is not enough. In the immediate aftermath of the West African epidemic, expert panels reflected on lessons to prevent future outbreaks. A key insight that shapes future response is recognising the need to build the trust of communities affected by health emergencies. The work done by social scientists and community activists during the Ebola outbreak highlighted the importance of two-way dialogue and the development of response measures that take into account people’s experiences and perspectives. For example, such dialogue led to the integration of local funerary practices in the ways safe and dignified burials were conducted. Community engagement is now an established component of any international response. ref: https://www.lshtm.ac.uk/newsevents/expert-opinion/ebola-10-years-why-trust-remains-key
+
+
